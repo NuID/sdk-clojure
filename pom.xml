@@ -7,7 +7,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <packaging>jar</packaging>
   <groupId>nuid</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
   <name>sdk</name>
   <dependencies>
     <dependency>
