@@ -20,7 +20,7 @@ clean:
 	rm -rf *.pom.asc
 
 deploy: $(jar)
-	clj -X:deploy :artifact $(jar)
+	mvn deploy:deploy-file -Dfile=$(jar) -DpomFile=pom.xml -DrepositoryId=clojars -Durl=https://clojars.org/repo/
 
 deps:
 	clojure -A:test:runner -P

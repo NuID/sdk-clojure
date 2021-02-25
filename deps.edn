@@ -10,9 +10,5 @@
                                                      :sha     "5fe6fc7e77eec2d0bc698191a0e2af1a92e8872c"}}
                       :extra-paths ["test"]}
              :jar    {:replace-deps {seancorfield/depstar {:mvn/version "2.0.188"}}
-                      :exec-fn      hf.depstar/jar}
-             :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "RELEASE"}}
-                      :exec-fn    deps-deploy.deps-deploy/deploy
-                      :exec-args
-                      {:installer :remote}}}
+                      :exec-fn      hf.depstar/jar}}
  :paths     ["src"]}
