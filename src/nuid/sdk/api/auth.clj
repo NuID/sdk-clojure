@@ -165,7 +165,8 @@
 
 (defn credential-get
   "Fetch a credential by it's unique `nuid` which can be extracted from the
-  response to [[credential-create]].
+  response to [[credential-create]]. Credential will conform to the
+  `:nuid/credential` spec.
 
   The successful response body will contain the following string keys:
 
@@ -187,8 +188,6 @@
   Generally you will end up storing the NuID with your user record during
   registration. Later during login use the NuID to fetch the credential using
   this method, passing the returned credential from the response body to
-  [[challenge-get]]. "
-  "Retrieve a stored credential. Credential will conform to the
-  `:nuid/credential` spec."
+  [[challenge-get]]."
   [nuid]
   (-get (str "/credential/" nuid)))
