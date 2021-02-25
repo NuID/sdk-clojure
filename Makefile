@@ -5,7 +5,7 @@ version:
 	@echo $(version)
 
 .env:
-	sh make-env.sh
+	sh scripts/make-env.sh
 
 target:
 	mkdir -f target
