@@ -17,31 +17,18 @@ guides, video tutorials, and more.
 
 ## Install
 
-### tools.deps
+### Clojure CLI/deps.edn
 
-```edn
-{:deps
- {nuid/sdk {:git/url "https://github.com/NuID/sdk-clojure"
-            :sha     "..."}}}
-```
-
-Or from [clojars](https://clojars.org/nuid/sdk):
-
-```edn
-{:deps
- {nuid/sdk {:mvn/version "0.3.0"}}}
+``` clojure
+nuid/sdk {:mvn/version "0.3.0"}
+;; or
+nuid/sdk {:git/url "https://github.com/NuID/sdk-clojure" :sha "..."}
 ```
 
 ### Leiningen/Boot
 
 ``` clojure
 [nuid/sdk "0.3.0"]
-```
-
-### Clojure CLI/deps.edn
-
-``` clojure
-nuid/sdk {:mvn/version "0.3.0"}
 ```
 
 ### Gradle
