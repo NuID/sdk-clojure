@@ -1,3 +1,5 @@
 .env
 .cpcache/
 .nrepl-port
+*.pom.asc
+target/

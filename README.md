@@ -2,16 +2,16 @@
 
 # NuID SDK for Clojure
 
-[![nuid/sdk on Clojars](https://img.shields.io/clojars/v/lynxeyes/dotenv.svg)](https://clojars.org/NuID/sdk)
-[![nuid/sdk on cljdoc](https://cljdoc.org/badge/NuID/sdk)](https://cljdoc.org/d/NuID/sdk/CURRENT)
-[![portal docs](https://img.shields.io/badge/docs-platform-purple?style=for-the-badge&logo=read-the-docs)](https://portal.nuid.io/docs)
+[![nuid/sdk on Clojars](https://img.shields.io/clojars/v/nuid/sdk.svg)](https://clojars.org/nuid/sdk)
+[![nuid/sdk on cljdoc](https://cljdoc.org/badge/nuid/sdk)](https://cljdoc.org/d/nuid/sdk/CURRENT)
+[![portal docs](https://img.shields.io/badge/docs-platform-purple?logo=read-the-docs)](https://portal.nuid.io/docs)
 [![test](https://github.com/NuID/sdk-clojure/actions/workflows/test.yml/badge.svg)](https://github.com/NuID/sdk-clojure/actions/workflows/test.yml)
 
 This repo provides a lib for interacting with NuID APIs within Clojure
 applications.
 
 Read the latest [lib
-docs](https://cljdoc.org/d/NuID/sdk/CURRENT) or
+docs](https://cljdoc.org/d/nuid/sdk/CURRENT) or
 checkout the [NuID platform docs](https://portal.nuid.io/docs) for API docs,
 guides, video tutorials, and more.
 
@@ -25,7 +25,7 @@ guides, video tutorials, and more.
             :sha     "..."}}}
 ```
 
-Or from [clojars]():
+Or from [clojars](https://clojars.org/nuid/sdk):
 
 ```
 # TODO coming soon
@@ -38,7 +38,7 @@ Example ring handler.
 For a more detailed example visit the [Integrating with
 NuID](https://portal.nuid.io/docs/guides/integrating-with-nuid) guide and the
 accompanying [examples repo](https://github.com/NuID/examples).
-A ruby-specific code example is coming soon.
+A clojure-specific code example is coming soon.
 
 
 ```clojure
