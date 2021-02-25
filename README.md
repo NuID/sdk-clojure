@@ -5,6 +5,7 @@
 [![nuid/sdk on Clojars](https://img.shields.io/clojars/v/lynxeyes/dotenv.svg)](https://clojars.org/NuID/sdk)
 [![nuid/sdk on cljdoc](https://cljdoc.org/badge/NuID/sdk)](https://cljdoc.org/d/NuID/sdk/CURRENT)
 [![portal docs](https://img.shields.io/badge/docs-platform-purple?style=for-the-badge&logo=read-the-docs)](https://portal.nuid.io/docs)
+[![test](https://github.com/NuID/sdk-clojure/actions/workflows/test.yml/badge.svg)](https://github.com/NuID/sdk-clojure/actions/workflows/test.yml)
 
 This repo provides a lib for interacting with NuID APIs within Clojure
 applications.
@@ -46,17 +47,14 @@ A ruby-specific code example is coming soon.
 
 ## Development
 
-You'll want to download docker to run the tests, as we depend on the
-`@nuid/cli` npm package to provide a CLI you can shell out to
-in the tests for generating zk crypto. After checking out the repo, run
-`bin/setup` to install dependencies and create the docker environment. Then, run
-`make test` to run the tests inside the running container. You can also run
-`bin/console` for an interactive prompt that will allow you to experiment, but
-you'll probably want to run that in the container (use `make shell` to get a
-prompt in the container).
+You'll need the following dependencies on your system:
 
-`make clean` will stop and destroy the container and image. `make build run`
-will rebuild the image and run the container.
++ OpenJDK 8
++ Clojure 1.10
++ NodeJS 12 (with npm)
+
+You can invoke the tests using `make test`. On your first run you'll be prompted
+for the Auth API Host and Key.
 
 ## Contributing
 

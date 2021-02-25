@@ -11,7 +11,7 @@
 (defn zk
   [command & args]
   (->> (json/write-value-as-string args)
-       (shell/sh "./node_modules/.bin/nuid-cli" "zk" command)
+       (shell/sh "npx" "-q" "-p" "@nuid/cli" "nuid-cli" "zk" command)
        (:out)
        (json/read-value)))
 
@@ -33,14 +33,14 @@
   (let [secret              "my super secret password"
         verified-credential (zk "verifiableFromSecret" secret)
 
-        created-res (assert-res 201 (auth/credential-create verified-credential))
-        nuid        (get-in created-res [:body "nu/id"])
-        new-credential  (get-in created-res [:body "nuid/credential"])
-        _           (t/is (not (string/blank? nuid)))
-        _           (t/is (not (nil? new-credential)))
+        created-res    (assert-res 201 (auth/credential-create verified-credential))
+        nuid           (get-in created-res [:body "nu/id"])
+        new-credential (get-in created-res [:body "nuid/credential"])
+        _              (t/is (not (string/blank? nuid)))
+        _              (t/is (not (nil? new-credential)))
 
         credential-res (assert-res 200 (auth/credential-get nuid))
-        credential  (get-in credential-res [:body "nuid/credential"])
+        credential     (get-in credential-res [:body "nuid/credential"])
         _              (t/is (= (get new-credential "nuid.elliptic.curve/point")
                                 (get credential "nuid.elliptic.curve/point")))
 
