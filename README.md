@@ -29,25 +29,25 @@ Or from [clojars](https://clojars.org/nuid/sdk):
 
 ```edn
 {:deps
- {nuid/sdk {:mvn/version "0.1.0"}}}
+ {nuid/sdk {:mvn/version "0.2.0"}}}
 ```
 
 ### Leiningen/Boot
 
 ``` clojure
-[nuid/sdk "0.1.0"]
+[nuid/sdk "0.2.0"]
 ```
 
 ### Clojure CLI/deps.edn
 
 ``` clojure
-nuid/sdk {:mvn/version "0.1.0"}
+nuid/sdk {:mvn/version "0.2.0"}
 ```
 
 ### Gradle
 
 ``` clojure
-compile 'nuid:sdk:0.1.0'
+compile 'nuid:sdk:0.2.0'
 ```
 
 ### Maven
@@ -56,7 +56,7 @@ compile 'nuid:sdk:0.1.0'
 <dependency>
   <groupId>nuid</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 
