@@ -27,8 +27,37 @@ guides, video tutorials, and more.
 
 Or from [clojars](https://clojars.org/nuid/sdk):
 
+```edn
+{:deps
+ {nuid/sdk {:mvn/version "0.1.0"}}}
 ```
-# TODO coming soon
+
+### Leiningen/Boot
+
+``` clojure
+[nuid/sdk "0.1.0"]
+```
+
+### Clojure CLI/deps.edn
+
+``` clojure
+nuid/sdk {:mvn/version "0.1.0"}
+```
+
+### Gradle
+
+``` clojure
+compile 'nuid:sdk:0.1.0'
+```
+
+### Maven
+
+``` maven-pom
+<dependency>
+  <groupId>nuid</groupId>
+  <artifactId>sdk</artifactId>
+  <version>0.1.0</version>
+</dependency>
 ```
 
 ## Usage
