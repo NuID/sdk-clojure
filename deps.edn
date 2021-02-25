@@ -1,19 +1,19 @@
-{:mvn/repos
- {"clojars" {:url "https://repo.clojars.org/"}}
- :deps
- {metosin/jsonista  {:mvn/version "0.3.1"}
-  clj-http/clj-http {:mvn/version "3.12.1"}}
- :aliases
- {:runner
-  {:extra-deps
-   {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
-                               :sha     "209b64504cb3bd3b99ecfec7937b358a879f55c1"}}
-   :extra-paths ["test"]
-   :main-opts   ["-m" "cognitect.test-runner"]}
-  :test
-  {:extra-deps
-   {lynxeyes/dotenv {:mvn/version "1.1.0"}
-    nuid/base64     {:git/url "https://github.com/NuID/base64"
-                     :sha     "5fe6fc7e77eec2d0bc698191a0e2af1a92e8872c"}}
-   :extra-paths ["test"]}}
- :paths ["src"]}
+{:mvn/repos {"clojars" {:url "https://repo.clojars.org/"}}
+ :deps      {metosin/jsonista  {:mvn/version "0.3.1"}
+             clj-http/clj-http {:mvn/version "3.12.1"}}
+ :aliases   {:runner {:extra-deps  {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
+                                                               :sha     "209b64504cb3bd3b99ecfec7937b358a879f55c1"}}
+                      :extra-paths ["test"]
+                      :main-opts   ["-m" "cognitect.test-runner"]}
+             :test   {:extra-deps  {lynxeyes/dotenv {:mvn/version "1.1.0"}
+                                    nuid/base64     {:git/url "https://github.com/NuID/base64"
+                                                     :sha     "5fe6fc7e77eec2d0bc698191a0e2af1a92e8872c"}}
+                      :extra-paths ["test"]}
+             :jar    {:replace-deps {seancorfield/depstar {:mvn/version "2.0.188"}}
+                      :exec-fn      hf.depstar/jar}
+             :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "RELEASE"}}
+                      :exec-fn    deps-deploy.deps-deploy/deploy
+                      :exec-args
+                      {:installer      :remote
+                       :sign-releases? true}}}
+ :paths     ["src"]}
